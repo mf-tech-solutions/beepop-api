@@ -2,8 +2,7 @@
   "type": "sqlite",
   "database": "./db.sqlite3",
   "autoLoadEntities": true,
-  "entities": ["*.model.{js,ts}"],
-  "migrations": ["dist/migrations/*.js"],
+  "migrations": ["dist/**/*migrations/*.js"],
   "cli": {
     "migrationsDir": "src/migrations"
   }
