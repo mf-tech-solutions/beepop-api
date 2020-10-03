@@ -8,7 +8,7 @@ import {
 } from "@nestjs/common";
 import { ApiResponse } from "../common/common.apiResponse";
 import { CommonHelpers } from "../common/common.helpers";
-import { CommonResource } from "../common/common.resource";
+import { MusicResource } from "./music.resource";
 import { MusicService } from "./music.service";
 import { MusicValidator } from "./music.validator";
 
@@ -25,8 +25,8 @@ export class MusicController {
 
       const result = await this.service.GetAll(page);
       const elapsedTime = CommonHelpers.getElapsedTimeInMilliseconds(start);
-      Logger.debug(
-        CommonResource.ElapsedTime + elapsedTime + "ms",
+      Logger.log(
+        MusicResource.ElapsedTime + elapsedTime + "ms",
         "MusicController.GetAll",
         false,
       );
@@ -37,8 +37,8 @@ export class MusicController {
       };
     } catch (error) {
       const elapsedTime = CommonHelpers.getElapsedTimeInMilliseconds(start);
-      Logger.debug(
-        CommonResource.ElapsedTime + elapsedTime + "ms",
+      Logger.log(
+        MusicResource.ElapsedTime + elapsedTime + "ms with error",
         "MusicController.GetAll",
         false,
       );
