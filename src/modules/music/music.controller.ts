@@ -6,9 +6,9 @@ import {
   Logger,
   Query,
 } from "@nestjs/common";
-import { ApiResponse } from "../common/common.ApiResponse";
+import { ApiResponse } from "../common/common.apiResponse";
 import { CommonHelpers } from "../common/common.helpers";
-import { CommonResource } from "../common/common.Resource";
+import { CommonResource } from "../common/common.resource";
 import { MusicService } from "./music.service";
 import { MusicValidator } from "./music.validator";
 
