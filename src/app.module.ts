@@ -12,11 +12,7 @@ import { IntegrationModule } from "./modules/integration/integration.module";
     IntegrationModule,
 
     ConfigModule.forRoot({ isGlobal: true }),
-    TypeOrmModule.forRoot({
-      type: "sqlite",
-      database: "./db.sqlite3",
-      autoLoadEntities: true,
-    }),
+    TypeOrmModule.forRoot(),
   ],
 })
 export class AppModule {}
