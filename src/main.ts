@@ -8,7 +8,7 @@ async function bootstrap() {
   //#region Config
   const localPort = 3001;
   const port = process.env.PORT || localPort;
-  const origin = port === localPort ? "*" : "producesbeepop";
+  const origin = port === localPort ? "*" : "https://producoesbeepop.web.app/";
   //#endregion
 
   Logger.log("Listening on port", "boostrap");
