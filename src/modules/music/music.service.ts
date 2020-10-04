@@ -42,7 +42,7 @@ export class MusicService {
     if (total > 0 && itemsToFetch.length === 0) {
       return {
         Items: data,
-        Total: total,
+        TotalPages: Math.ceil(total / this._pageSize),
       };
     }
 
