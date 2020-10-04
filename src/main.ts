@@ -1,3 +1,4 @@
+import { Logger } from "@nestjs/common";
 import { NestFactory } from "@nestjs/core";
 import { AppModule } from "./app.module";
 
@@ -10,7 +11,7 @@ async function bootstrap() {
   const origin = port === localPort ? "*" : "producesbeepop";
   //#endregion
 
-  console.log(port);
+  Logger.log("Listening on port", "boostrap");
 
   app.enableCors({ origin });
   await app.listen(port);
